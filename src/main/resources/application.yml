@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fhbank_db
+    username: postgres
+    password: elerp
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    jwt:
+      private-key: classpath:keys/private.pem
+      public-key: classpath:keys/public.pem

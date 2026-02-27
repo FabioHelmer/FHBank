@@ -1,0 +1,10 @@
+package br.com.fhbank.enums;
+
+public enum TipoTransacao {
+    DEPOSITO,
+    SAQUE,
+    TRANSFERENCIA,
+    EMPRESTIMO_CREDITO,
+    EMPRESTIMO_PARCELA,
+    TRANSFERENCIA_SAIDA, TRANSFERENCIA_ENTRADA, ESTORNO
+}
