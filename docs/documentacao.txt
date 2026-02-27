@@ -1,0 +1,105 @@
+1️⃣ Transação (CORE do banco) ⭐⭐⭐⭐⭐
+
+Sem isso, o sistema não é um banco
+
+ Depósito
+
+ Saque
+
+ Transferência entre contas
+
+ Extrato (listagem de transações)
+
+ Validações:
+
+valor > 0
+
+saldo suficiente
+
+concorrência
+
+ Persistir saldo anterior / posterior
+
+ Transações ACID (@Transactional)
+
+👉 PRÓXIMO PASSO OBRIGATÓRIO
+
+2️⃣ Fluxo de Empréstimo ⭐⭐⭐⭐
+
+ Solicitar empréstimo (usuário)
+
+ Listar solicitações pendentes
+
+ Aprovar empréstimo (ADMIN)
+
+ Recusar empréstimo (ADMIN)
+
+ Crédito automático em conta
+
+ Geração das parcelas
+
+ Débito mensal automático (simulado)
+
+
+//ate aqui ja foi
+
+
+3️⃣ Autorização por dono do recurso ⭐⭐⭐
+
+Hoje:
+
+ADMIN faz tudo
+
+Falta:
+
+ Usuário comum só vê sua própria conta
+
+ Usuário comum só vê suas transações
+
+ Usuário comum não acessa dados globais
+
+(ex.: #usuarioId == authentication.name)
+
+4️⃣ Extrato avançado ⭐⭐⭐
+
+ Filtro por período
+
+ Filtro por tipo de transação
+
+ Paginação
+
+ Ordenação
+
+5️⃣ Validações e integridade ⭐⭐
+
+ CPF válido (algoritmo)
+
+ E-mail case-insensitive
+
+ Bloquear exclusão de conta com histórico
+
+ Indexes no banco (performance)
+
+6️⃣ Observabilidade / Qualidade ⭐⭐
+
+ Logs de auditoria
+
+ Log de transações financeiras
+
+ Respostas padronizadas
+
+ Health check
+
+7️⃣ Testes ⭐⭐
+
+ Unitários (Service)
+
+ Integração (Controller)
+
+ Testes de concorrência (saque simultâneo)
+
+8️⃣ Documentação ⭐
+
+ Swagger / OpenAPI
+
+ README com fluxo
