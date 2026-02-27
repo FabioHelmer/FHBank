@@ -5,6 +5,9 @@ import br.com.fhbank.dtos.emprestimo.EmprestimoResponseDTO;
 import br.com.fhbank.dtos.emprestimo.EmprestimoSolicitacaoDTO;
 import br.com.fhbank.models.Usuario;
 import br.com.fhbank.services.EmprestimoService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -30,6 +33,12 @@ public class EmprestimoController {
     }
 
     /* USUÁRIO */
+    @Operation(summary = "Solicitar empréstimo")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Solicitação criada"),
+            @ApiResponse(responseCode = "400", description = "Dados inválidos"),
+            @ApiResponse(responseCode = "401", description = "Não autorizado")
+    })
     @PostMapping("/solicitar")
     public EmprestimoResponseDTO solicitar(
             @AuthenticationPrincipal Jwt jwt,
